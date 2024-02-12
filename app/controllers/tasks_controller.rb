@@ -6,6 +6,7 @@ class TasksController < ApplicationController
   end
 
   def new
+    @password = Password.new
   end
 
   def edit
