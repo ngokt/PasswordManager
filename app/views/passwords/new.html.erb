@@ -1,0 +1,10 @@
+<h1 class ="title">PassWordrobe</h1>
+    <nav class="nav justify-content-end">
+        <%=link_to "一覧", passwords_path, class: "nav-link" %>
+    </nav>
+    <%= form_with model: @password, local: true do |form|%>
+        <%= form.label :name%>
+        <%= form.text_field :name, class: "from-control", id: "password_name"%>
+        <%= form.submit "登録する" , class: "btn btn-primary"%>
+    <% end %>
+

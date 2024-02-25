@@ -1,4 +1,4 @@
-class TasksController < ApplicationController
+class PasswordsController < ApplicationController
   def index
   end
 

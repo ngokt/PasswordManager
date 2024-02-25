@@ -1,23 +1,23 @@
 require "test_helper"
 
-class TasksControllerTest < ActionDispatch::IntegrationTest
+class PasswordsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get tasks_index_url
+    get passwords_index_url
     assert_response :success
   end
 
   test "should get show" do
-    get tasks_show_url
+    get passwords_show_url
     assert_response :success
   end
 
   test "should get new" do
-    get tasks_new_url
+    get passwords_new_url
     assert_response :success
   end
 
   test "should get edit" do
-    get tasks_edit_url
+    get passwords_edit_url
     assert_response :success
   end
 end
