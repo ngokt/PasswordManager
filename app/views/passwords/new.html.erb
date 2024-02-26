@@ -2,9 +2,17 @@
     <nav class="nav justify-content-end">
         <%=link_to "一覧", passwords_path, class: "nav-link" %>
     </nav>
-    <%= form_with model: @password, local: true do |form|%>
-        <%= form.label :name%>
-        <%= form.text_field :name, class: "from-control", id: "password_name"%>
-        <%= form.submit "登録する" , class: "btn btn-primary"%>
-    <% end %>
+    <div class="container">
+        <%= form_with model: @password, local: true do |form|%>
+            <div class="form-group">
+                <%= form.label :name, "名称"%>
+                <%= form.text_field :name, class: "form-control", id: "password_name"%>
+            </div>
+            <div class="form-group">
+                <%= form.label :uer_id, "ユーザーID"%>
+                <%= form.text_field :uer_id, class: "form-control", id: "password_user_id"%>
+            </div>
+            <%= form.submit "登録する" , class: "btn btn-primary"%>
+        <% end %>
+    </div>
 
