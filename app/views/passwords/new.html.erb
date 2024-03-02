@@ -9,10 +9,24 @@
                 <%= form.text_field :name, class: "form-control", id: "password_name"%>
             </div>
             <div class="form-group">
-                <%= form.label :uer_id, "ユーザーID"%>
-                <%= form.text_field :uer_id, class: "form-control", id: "password_user_id"%>
+                <%= form.label :user_id, "ユーザーID"%>
+                <%= form.text_field :user_id, class: "form-control", id: "password_user_id"%>
             </div>
-            <%= form.submit "登録する" , class: "btn btn-primary"%>
+            <div class="form-group">
+                <%= form.label :mail, "メールアドレス"%>
+                <%= form.email_field :mail, class: "form-control", id: "password_mail"%>
+            </div>
+            <div class="form-group">
+                <%= form.label :password_digest, "パスワード"%>
+                <%= form.password_field :password_digest, class: "form-control", id: "password_password_digest"%>
+            </div>
+            <div class="form-group">
+                <%= form.label :memo, "メモ"%>
+                <%= form.text_area :memo, class: "form-control", id: "password_memo"%>
+            </div>
+            <div class="submitbutton">
+                <%= form.submit "登録する" , class: "btn btn-primary"%>
+            </div>
         <% end %>
     </div>
 
