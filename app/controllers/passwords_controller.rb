@@ -1,5 +1,6 @@
 class PasswordsController < ApplicationController
   def index
+    @Passwords = Password.all
   end
 
   def show
