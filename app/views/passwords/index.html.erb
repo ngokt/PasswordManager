@@ -1,27 +1,29 @@
 <h1 class ="title">PassWordrobe</h1>
-    <div class="area1">
-        <div class="area2">
-            <%= text_field_tag "searchtext","" %>
-            <%=button_to "検索", "", class: "btn btn-primary" %>
+    <div class="m-3">
+        <div class="area1">
+            <div class="area2">
+                <%= text_field_tag "searchtext","" %>
+                <%=button_to "検索", "", class: "btn btn-primary" %>
+            </div>
+            <div class="area2">
+                <%=link_to "＋新規登録", new_password_path, class: "btn btn-success" %>
+                <%=button_to "削除", "", class: "btn btn-danger" %>
+            </div>
         </div>
-        <div class="area2">
-            <%=link_to "＋新規登録", new_password_path, class: "btn btn-success" %>
-            <%=button_to "削除", "", class: "btn btn-danger" %>
-        </div>
-    </div>
-    <table class="table table-hover">
-        <thead class="thead-default">
-            <tr>
-                <th>名称</th>
-                <th>登録日時</th>
-            </tr>
-        </thead>
-        <tboby>
-            <% @Passwords.each do |password| %>
+        <table class="table table-hover">
+            <thead class="thead-default">
                 <tr>
-                    <td><%= password.name %></td>
-                    <td><%= password.created_at %></td>
+                    <th>名称</th>
+                    <th>登録日時</th>
                 </tr>
-            <% end %>
-        </tboby>
-    </table>
+            </thead>
+            <tboby>
+                <% @Passwords.each do |password| %>
+                    <tr>
+                        <td><%=link_to password.name, password_path(password) %></td>
+                        <td><%= password.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+                    </tr>
+                <% end %>
+            </tboby>
+        </table>
+    </div>
