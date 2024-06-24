@@ -4,6 +4,7 @@ class PasswordsController < ApplicationController
   end
 
   def show
+    @password = Password.find(params[:id])
   end
 
   def new
