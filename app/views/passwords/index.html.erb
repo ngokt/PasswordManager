@@ -17,13 +17,13 @@
                     <th>登録日時</th>
                 </tr>
             </thead>
-            <tboby>
+            <tbody>
                 <% @Passwords.each do |password| %>
                     <tr>
                         <td><%=link_to password.name, password_path(password) %></td>
                         <td><%= password.created_at.strftime("%Y-%m-%d %H:%M") %></td>
                     </tr>
                 <% end %>
-            </tboby>
+            </tbody>
         </table>
     </div>
