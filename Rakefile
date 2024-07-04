@@ -3,4 +3,4 @@
 
 require_relative "config/application"
 
-Rails.application.load_passwords
+Rails.application.load_tasks
